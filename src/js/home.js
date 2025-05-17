@@ -38,3 +38,16 @@ particlesJS('particles-js', {
   },
   retina_detect: true
 });
+
+
+    document.getElementById('btn').addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const heart = document.getElementById('heart-transition');
+    heart.classList.add('active');
+
+    // Aguarda a animação mais longa (1.8s) antes de redirecionar
+    setTimeout(() => {
+      window.location.href = 'pages/central.html';
+    }, 1000);
+  });

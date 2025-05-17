@@ -54,3 +54,39 @@ h1{
   background-color: #c4c4c4 !important;
   color: #dc3545 !important;
 }
+
+/* ------------- Coração animação ---------------- */
+
+ #heart-transition {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: #dc3545;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 9999;
+    transition: transform 1s ease-in-out;
+    pointer-events: none;
+  }
+
+  #heart-transition.active {
+    transform: translate(-50%, -50%) scale(50);
+  }
+
+  .pulse {
+    animation: pulse-animation 2s infinite;
+  }
+
+  @keyframes pulse-animation {
+    0% {
+      box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 20px rgba(220, 53, 69, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+    }
+  }

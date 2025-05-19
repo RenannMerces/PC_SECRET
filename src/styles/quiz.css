@@ -16,3 +16,14 @@
     background-color: #28081d;
     z-index: -1;
 }
+
+/* ------------------ mensagems -------------------- */
+
+#message {
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+}
+
+#message.show {
+  opacity: 1;
+}

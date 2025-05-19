@@ -10,16 +10,35 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
  </head>
- <body>
+<body class="d-flex justify-content-center align-items-center vh-100 bg-dark text-white">
+    <!-- Partículas no fundo -->
+    <div id="particles-js"></div>
 
-  <!-- Partículas no fundo -->
-  <div id="particles-js"></div>
+    <!-- Frases animadas -->
+    <div id="message-container" class="text-center px-3">
+      <h2 id="message" class="fw-bold display-4"></h1>
+    </div>
 
+    <!-- Quiz container (inicialmente oculto) -->
+    <div id="quiz-container" class="d-none text-center px-3">
+      <!-- Quiz Content -->
+      <h2 id="quiz-question" class="text-white mb-4"></h2>
+      <div id="quiz-options" class="d-flex flex-column gap-2"></div>
+      <div id="quiz-feedback" class="text-center mt-3"></div>
+    </div>
 
-<!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-  <script src="../src/js/quiz.js"></script>
- </body>
+    <!-- Menu de Recomeço -->
+    <div id="restart-menu" class="d-none text-center mt-5">
+      <p class="fw-bold fs-5">Você errou duas vezes. Deseja recomeçar o quiz?</p>
+      <button id="restart-yes" class="btn btn-success me-2">Sim</button>
+      <button id="restart-no" class="btn btn-danger">Não</button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="../src/js/quiz.js"></script>
+</body>
+
 
  </html>

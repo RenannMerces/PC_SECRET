@@ -19,6 +19,15 @@
 
 /* -------------- Titulo principal --------------------- */
 
+#name{
+  transition: 0.2s;
+}
+#name:hover {
+    color: #ffffff;
+    text-decoration: none;
+    text-shadow: 0 0 10px #dc3545, 0 0 20px #dc3545, 0 0 30px #dc3545, 0 0 40px #dc3545;
+}
+
 h1{
    font-family: "Oswald", sans-serif;
 }

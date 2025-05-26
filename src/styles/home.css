@@ -28,6 +28,17 @@
     text-shadow: 0 0 10px #dc3545, 0 0 20px #dc3545, 0 0 30px #dc3545, 0 0 40px #dc3545;
 }
 
+#frase-dica{
+    color: #1550f3;
+    transition: 0.2s;
+}
+
+#frase-dica:hover {
+    color: #ffffff;
+    text-decoration: none;
+    text-shadow: 0 0 10px #4472f1 , 0 0 20px #4472f1, 0 0 30px #4472f1, 0 0 40px #4472f1;
+}
+
 h1{
    font-family: "Oswald", sans-serif;
 }

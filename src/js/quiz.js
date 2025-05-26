@@ -56,22 +56,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const quiz = [
     {
-      q: "Lizza é mais alta que Renan?",
+      q: "Cê é mais alta que eu?",
       o: ["Sim", "Não"],
       c: "Não",
-      f: ["Não se iluda em ksksksks", "Isso mesmo, hahaha"]
+      f: ["Não se iluda ksksksks", "EXAtAMENTE HEHEHEHHEH"]
     },
     {
-      q: "Renan já fez uma surpresa dessas antes?",
+      q: "Renan já fez uma surpresa dessas antes?", 
       o: ["Sim", "Não"],
       c: "Não",
       f: ["Confiante demais, hein!", "Acertou de novo!"]
     },
     {
-      q: "Lizza prefere doce ou salgado?",
-      o: ["Doce", "Salgado"],
-      c: "Doce",
-      f: ["Tenta outra vez... não, pera, já errou 😅", "Adoçou a resposta!"]
+      q: "Depois dessa surpresa vou merecer uma dica?😔😔😔",
+      o: ["Sim", "Não"],
+      c: "Sim",
+      f: ["Assim fico triste", "YEEEEEEEEEEE"]
     }
   ];
 

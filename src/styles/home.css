@@ -17,6 +17,24 @@
     z-index: -1;
 }
 
+
+/*----------------  Aniversário nome rainbow ------------ */
+
+.rainbow-text {
+  background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 1400% 1400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow 10s ease infinite;
+  transition: font-family 0.8s ease-in-out;
+}
+
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 /* -------------- Titulo principal --------------------- */
 
 @keyframes glow {

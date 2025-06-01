@@ -19,37 +19,56 @@
         <div class="container">
             <div class="row align-items-center">
 
-            <!-- Imagem à esquerda (ou em cima em telas menores) -->
-            <div class="col-12 col-md-6 mb-4 mb-md-0 text-center">
-                <img src="src/assets/uwp4596405.jpeg" alt="Imagem" class="img-fluid rounded shadow">
-            </div>
-
-            <!-- Conteúdo à direita (ou abaixo da imagem em telas menores) -->
-            <div class="col-12 col-md-6 text-center">
-                <h1 class="display-4 text-white">Feliz Aniversário, <a style="text-decoration: none;" target="_blank" href="https://youtu.be/sRITrFmTT3s?si=eZj0vfCkQf0A0aCX"><span id="name" class="text-lizza">Lizza</span></a>!</h1>
-                <p class="lead text-white">
-                Hoje é um dia muito especial e preparei um presente <i style="color: #00FFFF;" id="frase-dica">"além da vidal real"</i> pra você ksksksksk 🫶
-                </p>
-
-                <!-- TEXTO + SETA + BOTÃO DE CORAÇÃO -->
-                <div class="d-flex justify-content-center align-items-center flex-wrap gap-3 mt-4">
-                <span class="text-white fs-5">Clique aqui para ver a <span class="text-surpresa">surpresa</span>!</span>
-                <i class="bi bi-arrow-right text-white fs-3 d-none d-sm-inline"></i>
-
-                <!-- Botão coração animado -->
-                <button id="btn" class="btn btn-danger rounded-circle d-flex align-items-center justify-content-center pulse">
-                <i class="bi bi-heart-fill fs-4"></i>
-                </button>
-
-                <!-- Tela de transição (inicialmente oculta) -->
-                <div id="heart-transition"></div>
-
+                <!-- Imagem à esquerda (ou em cima em telas menores) -->
+                <div class="col-12 col-md-6 mb-4 mb-md-0 text-center">
+                    <img src="src/assets/foto_lizzaerenan.jpg" alt="Imagem" class="img-fluid rounded shadow">
                 </div>
-            </div>
+
+                <!-- Conteúdo à direita (ou abaixo da imagem em telas menores) -->
+                <div class="col-12 col-md-6 text-center">
+
+                    <h1 class="display-4 text-white">Feliz Aniversário, <a style="text-decoration: none;" target="_blank" href="https://youtu.be/sRITrFmTT3s?si=eZj0vfCkQf0A0aCX"><span id="name" class="text-lizza">Lizza</span></a>!</h1>
+                    
+                    <p class="lead text-white">
+                    Hoje é um dia muito especial e preparei um presente <i style="color: #00FFFF;" id="frase-dica">"além da vidal real"</i> pra você ksksksksk 🫶
+                    </p>
+
+                    <!-- TEXTO + SETA + BOTÃO DE CORAÇÃO -->
+                    <div class="d-flex justify-content-center align-items-center flex-wrap gap-3 mt-4">
+                        
+                    <!-- Frase com gatilho -->
+                    <span class="text-white fs-5"> Clique aqui para ver a 
+                        <span class="text-surpresa" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#surpresaModal">surpresa</span>!
+                    </span>
+
+                    <i class="bi bi-arrow-right text-white fs-3 d-none d-sm-inline"></i>
+
+                    <!-- Botão coração animado -->
+                    <button id="btn" class="btn btn-danger rounded-circle d-flex align-items-center justify-content-center pulse">
+                    <i class="bi bi-heart-fill fs-4"></i>
+                    </button>
+
+                    <!-- Tela de transição (inicialmente oculta) -->
+                    <div id="heart-transition"></div>
+
+                    </div>
+                </div>
 
             </div>
         </div>
     </section>
+
+<!-- Modal -->
+<div class="modal fade" id="surpresaModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-transparent border-0">
+      <div class="modal-body p-0">
+        <img src="/src/assets/1334103.jpeg" alt="Surpresa!" class="img-fluid w-100">
+        <!-- Substitua o src pela sua imagem -->
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <!-- Scripts -->

@@ -51,22 +51,3 @@ particlesJS('particles-js', {
       window.location.href = 'pages/quiz.html';
     }, 1000);
   });
-
-
-// -------------------- Palavra aniversário rainbow -------------------
-
-const fonts = [
-  "'Poppins', sans-serif",
-  "'Playfair Display', serif",
-  "'Quicksand', sans-serif",
-  "'Great Vibes', cursive"
-];
-
-const aniversario = document.getElementById("aniversario");
-
-let fontIndex = 0;
-
-setInterval(() => {
-  aniversario.style.fontFamily = fonts[fontIndex];
-  fontIndex = (fontIndex + 1) % fonts.length;
-}, 2000); // troca a cada 2 segundos

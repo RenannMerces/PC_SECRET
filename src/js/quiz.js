@@ -62,10 +62,10 @@ document.addEventListener("DOMContentLoaded", () => {
       f: ["Não se iluda ksksksks", "EXAtAMENTE HEHEHEHHEH"]
     },
     {
-      q: "Renan já fez uma surpresa dessas antes?", 
+      q: "Batman é melhor que a Barbie?", 
       o: ["Sim", "Não"],
-      c: "Não",
-      f: ["Confiante demais, hein!", "Acertou de novo!"]
+      c: "Sim",
+      f: ["Batman>>>>>>>>>", "Me desculpa moça KKSKSKSKSKS"]
     },
     {
       q: "Depois dessa surpresa vou merecer uma dica?😔😔😔",
@@ -122,7 +122,7 @@ const handleAnswer = (selected) => {
     ? `<img src="../src/assets/gifs/cat-jump.gif" alt="Acerto" style="width:150px; margin-top:10px;">`
     : step === 2
       ? `<img src="../src/assets/gifs/men-cry.gif" alt="Erro especial" style="width:150px; margin-top:10px;">`
-      : `<img src="../src/assets/gifs/cat-wow.gif" alt="Erro padrão" style="width:150px; margin-top:10px;">`;
+      : `<img src="../src/assets/gato-rindo.jpg" alt="Erro padrão" style="width:150px; margin-top:10px;">`;
 
   feedbackEl.innerHTML = `
     <p class="mt-4 fw-bold ${correct ? "text-success" : "text-danger"}">${correct ? f[1] : f[0]}</p>

@@ -133,41 +133,21 @@ const handleAnswer = (selected) => {
     disableButtons();
     setTimeout(() => {
       step++;
-      step < quiz.length ? showQuestion() : showEnd();
+      if (step < quiz.length) {
+        showQuestion();
+      } else {
+        // Redireciona para outra página ao fim do quiz
+        window.location.href = "../pages/central.html"; // Coloque aqui o destino desejado
+      }
     }, 3000);
   }
 };
-
 
 // -------------- Desabilitar os botões após a resposta ------------------
 
   const disableButtons = () => {
     [...optionsEl.children].forEach(btn => (btn.disabled = true));
   };
-
-  const showEnd = () => {
-    const finalMessages = [
-      "Me desculpa por isso ksksksksksksksk"
-    ];
-
-    questionEl.textContent = "Parabéns! Você concluiu o quiz 🎉";
-    optionsEl.innerHTML = "";
-    
-    feedbackEl.className = "mt-4 fw-bold text-info";
-    feedbackEl.textContent = finalMessages[Math.floor(Math.random() * finalMessages.length)];
-
-    // Botão "Ir pra surpresa"
-    const surpriseBtn = document.createElement("button");
-    surpriseBtn.className = "btn btn-primary mt-4";
-    surpriseBtn.textContent = "Ir pra surpresa 🎁";
-    surpriseBtn.onclick = () => {
-      // Altere para o link/tela real da sua surpresa
-      window.location.href = "surpresa.html"; // Substitua pelo caminho certo
-    };
-
-    optionsEl.appendChild(surpriseBtn);
-  };
-
 
   showMessages();
 });

@@ -144,3 +144,94 @@ h1{
       box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
     }
   }
+
+  /* ---------------- IMAGEM PRINCIPAL -------------- */
+
+.rainbow-border {
+  padding: 5px; /* Espaço para a borda */
+  border-radius: 2rem;
+  background: linear-gradient(270deg, 
+    red, orange, yellow, green, cyan, blue, violet, red);
+  background-size: 300% 300%;
+  animation: rainbow 6s linear infinite;
+  display: inline-block;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
+}
+
+.pretty-image {
+  border-radius: 2rem;
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border: 4px solid white; /* Pequeno contorno interno */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.pretty-image:hover {
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.05);
+}
+
+/* virar a imagem  */
+
+.card-flip-container {
+  perspective: 1000px;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  aspect-ratio: 1 / 1; /* mantém quadrado */
+  cursor: pointer;
+  position: relative;
+}
+
+.card-flip {
+  width: 100%;
+  height: 100%; /* para preencher o container quadrado */
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  border-radius: 2rem;
+}
+
+.card-flip-container.flipped .card-flip {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+  user-select: none; /* evita seleção ao clicar */
+  pointer-events: none; /* evita interferência do clique na imagem */
+}
+
+.card-back {
+  background-color: white;
+  transform: rotateY(180deg);
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  user-select: none;
+}

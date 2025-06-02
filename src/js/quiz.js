@@ -59,12 +59,12 @@ document.addEventListener("DOMContentLoaded", () => {
       q: "Cê é mais alta que eu?",
       o: ["Sim", "Não"],
       c: "Não",
-      f: ["Não se iluda ksksksks", "EXAtAMENTE HEHEHEHHEH"]
+      f: ["Não se iluda ksksksks", "EXATAMENTE HEHEHEHHEH"]
     },
     {
-      q: "Batman é melhor que a Barbie?", 
+      q: "Barbie é melhor que o Batman?", 
       o: ["Sim", "Não"],
-      c: "Sim",
+      c: "Não",
       f: ["Batman>>>>>>>>>", "Me desculpa moça KKSKSKSKSKS"]
     },
     {

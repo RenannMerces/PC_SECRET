@@ -51,3 +51,17 @@ particlesJS('particles-js', {
       window.location.href = 'pages/quiz.html';
     }, 1000);
   });
+
+// ------------------ imagem virando ----------------------
+
+  document.addEventListener("DOMContentLoaded", function () {
+  const front = document.querySelector(".card-front");
+  const back = document.querySelector(".card-back");
+
+  const img = front.querySelector("img");
+  img.onload = () => {
+    const height = img.offsetHeight;
+    front.style.height = height + "px";
+    back.style.height = height + "px";
+  };
+});

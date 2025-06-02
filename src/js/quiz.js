@@ -42,7 +42,7 @@ particlesJS('particles-js', {
 // ------------------- Frases ---------------------
 document.addEventListener("DOMContentLoaded", () => {
   const messages = [
-    "Você achou mesmo que seria tão fácil assim ver a surpresa?",
+    "Cê achou mesmo que seria tão fácil assim ver a surpresa?",
     "Precisa passar por um teste antes...",
     "Está preparada?"
   ];
@@ -77,6 +77,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let step = 0;
 
+  //  -------------- Mostrar as mensagens iniciais ------------------
+
   const showMessages = () => {
     if (step < messages.length) {
       messageEl.classList.remove("show");
@@ -93,6 +95,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+  // -------------- Mostrar as questões do quiz ------------------
+
   const showQuestion = () => {
     const { q, o } = quiz[step];
     questionEl.textContent = q;
@@ -108,23 +112,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  const handleAnswer = (selected) => {
-    const { c, f } = quiz[step];
-    const correct = selected === c;
+  // -------------- Lidar com a resposta do usuário ------------------
 
-    if (correct) {
-      feedbackEl.textContent = f[1];
-      feedbackEl.className = "mt-4 fw-bold text-success";
-      disableButtons();
-      setTimeout(() => {
-        step++;
-        step < quiz.length ? showQuestion() : showEnd();
-      }, 3000);
-    } else {
-      feedbackEl.textContent = f[0];
-      feedbackEl.className = "mt-4 fw-bold text-danger";
-    }
-  };
+const handleAnswer = (selected) => {
+  const { c, f } = quiz[step];
+  const correct = selected === c;
+
+  const gif = correct
+    ? `<img src="../src/assets/gifs/cat-jump.gif" alt="Acerto" style="width:150px; margin-top:10px;">`
+    : step === 2
+      ? `<img src="../src/assets/gifs/men-cry.gif" alt="Erro especial" style="width:150px; margin-top:10px;">`
+      : `<img src="../src/assets/gifs/cat-wow.gif" alt="Erro padrão" style="width:150px; margin-top:10px;">`;
+
+  feedbackEl.innerHTML = `
+    <p class="mt-4 fw-bold ${correct ? "text-success" : "text-danger"}">${correct ? f[1] : f[0]}</p>
+    ${gif}
+  `;
+
+  if (correct) {
+    disableButtons();
+    setTimeout(() => {
+      step++;
+      step < quiz.length ? showQuestion() : showEnd();
+    }, 3000);
+  }
+};
+
+
+// -------------- Desabilitar os botões após a resposta ------------------
 
   const disableButtons = () => {
     [...optionsEl.children].forEach(btn => (btn.disabled = true));

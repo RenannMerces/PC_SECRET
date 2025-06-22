@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
       q: "Cê é mais alta que eu?",
       o: ["Sim", "Não"],
       c: "Não",
-      f: ["Não se iluda ksksksks", "EXATAMENTE HEHEHEHHEH"]
+      f: ["Não se iluda", "EXATAMENTE HEHEHEHHEH"]
     },
     {
       q: "Barbie é melhor que o Batman?", 
@@ -152,3 +152,15 @@ const handleAnswer = (selected) => {
   showMessages();
 });
 
+// ------------- interrogação caindo ---------------
+
+  setInterval(() => {
+    const e = document.createElement("div");
+    e.className = "emoji";
+    e.textContent = "❓";
+    e.style.left = Math.random() * 100 + "vw";
+    const duration = 5 + Math.random() * 3; // 5–8s
+    e.style.animationDuration = duration + "s";
+    document.body.appendChild(e);
+    setTimeout(() => e.remove(), duration * 1000);
+  }, 800);

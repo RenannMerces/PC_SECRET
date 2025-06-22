@@ -235,3 +235,25 @@ h1{
   text-align: center;
   user-select: none;
 }
+
+/* --------------- Corações caindo ----------------- */
+
+  .falling-heart {
+    position: fixed;
+    top: -50px;
+    font-size: 16px;
+    animation: fall linear;
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+    @keyframes fall {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }

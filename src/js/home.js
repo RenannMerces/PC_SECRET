@@ -65,3 +65,20 @@ particlesJS('particles-js', {
     back.style.height = height + "px";
   };
 });
+// ------------------ animação de coração ----------------------
+
+  function createHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add('falling-heart');
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
+    heart.textContent = '❤️';
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 5000);
+  }
+
+  setInterval(createHeart, 300); // ajusta a frequência aqui

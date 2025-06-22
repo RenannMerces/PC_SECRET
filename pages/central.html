@@ -13,7 +13,100 @@
 <body>
     <div id="particles-js"></div>
 
-    
+ <!-- Galeria com blocos fixos -->
+<div class="container py-5">
+  <!-- Primeira linha -->
+  <div class="row g-3">
+    <!-- Imagem grande esquerda -->
+    <div class="col-lg-8 col-md-12">
+      <div class="gallery-block" style="height: 500px;">
+        <img src="../../src/assets/galeria/foto-1.jpg"
+            class="gallery-img"
+            data-bs-toggle="modal"
+            data-bs-target="#galeriaModal"
+            data-img="../../src/assets/galeria/foto-1.jpg"
+            data-caption="Essa é uma imagem especial 💖"
+            alt="Imagem grande">
+      </div>
+    </div>
+
+    <!-- Duas imagens empilhadas -->
+    <div class="col-lg-4 col-md-12 d-flex flex-column gap-3">
+      <div class="gallery-block" style="height: 245px;">
+        <img src="../../src/assets/galeria/foto-2.jpg"
+             class="gallery-img"
+             data-bs-toggle="modal"
+             data-bs-target="#galeriaModal"
+             data-img="../../src/assets/galeria/foto-2.jpg"
+             data-caption="Essa é uma imagem especial 💖"
+             alt="Imagem 1">
+      </div>
+      <div class="gallery-block" style="height: 245px;">
+        <img src="../../src/assets/galeria/foto-3.jpg"
+             class="gallery-img"
+             data-bs-toggle="modal"
+             data-bs-target="#galeriaModal"
+             data-img="../../src/assets/galeria/foto-3.jpg"
+             data-caption="Essa é uma imagem especial 💖"
+             alt="Imagem 2">
+      </div>
+    </div>
+  </div>
+
+  <!-- Segunda linha: 3 imagens lado a lado -->
+  <div class="row g-3 mt-2">
+    <div class="col-lg-4 col-md-4 col-sm-12">
+      <div class="gallery-block" style="height: 200px;">
+        <img src="../../src/assets/galeria/foto-4.jpg"
+             class="gallery-img"
+             data-bs-toggle="modal"
+             data-bs-target="#galeriaModal"
+             data-img="../../src/assets/galeria/foto-4.jpg"
+             data-caption="Essa é uma imagem especial 💖"
+             alt="Imagem 3">
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-12">
+      <div class="gallery-block" style="height: 200px;">
+        <img src="../../src/assets/galeria/foto-7.jpg"
+             class="gallery-img"
+             data-bs-toggle="modal"
+             data-bs-target="#galeriaModal"
+             data-img="../../src/assets/galeria/foto-7.jpg"
+             data-caption="Essa é uma imagem especial 💖"
+             alt="Imagem 4">
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-12">
+      <div class="gallery-block" style="height: 200px;">
+        <img src="../../src/assets/galeria/foto-6.jpg"
+             class="gallery-img"
+             data-bs-toggle="modal"
+             data-bs-target="#galeriaModal"
+             data-img="../../src/assets/galeria/foto-6.jpg"
+            data-caption="Essa é uma imagem especial 💖"
+             alt="Imagem 5">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal para ampliar imagens -->
+<div class="modal fade" id="galeriaModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark text-white rounded shadow-lg">
+      <div class="modal-body d-flex flex-column align-items-center justify-content-center p-4">
+        <img src="" id="modalImage" class="img-thumbnail mb-3" style="max-width: 90%; max-height: 60vh;" alt="Imagem ampliada">
+        <p id="modalCaption" class="text-center small fst-italic"></p>
+      </div>
+      <div class="modal-footer border-0 justify-content-center">
+        <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Script do modal -->
 
 
           <!-- Scripts -->

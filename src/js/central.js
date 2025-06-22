@@ -38,3 +38,15 @@ particlesJS('particles-js', {
   },
   retina_detect: true
 });
+
+//  --------------- script do modal da galerial ----------------------
+
+  const galeriaModal = document.getElementById('galeriaModal');
+  galeriaModal.addEventListener('show.bs.modal', function (event) {
+    const img = event.relatedTarget;
+    const src = img.getAttribute('data-img');
+    const caption = img.getAttribute('data-caption') || '';
+    
+    document.getElementById('modalImage').src = src;
+    document.getElementById('modalCaption').textContent = caption;
+  });

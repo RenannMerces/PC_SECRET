@@ -36,3 +36,22 @@
   .gallery-img:hover {
     transform: scale(1.05);
   }
+
+  /* ------------------------ MODAL STYLE --------------------------- */
+
+.modal-body {
+  background-color: #E6E0E0;
+  border-radius: 10px;
+}
+
+.modal-footer{
+  background-color: #E6E0E0 !important;
+}
+
+#modalImage{
+  border: 3px solid black;
+}
+
+#modalCaption{
+  color: black;
+}

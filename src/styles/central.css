@@ -56,11 +56,20 @@ body {
   height: 60px;
   padding: 0 15px;
   z-index: 999;
-  font-size: 14px;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.7);
 }
 
-/* Input de pesquisa com fundo escuro */
+.search-wrapper {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 180px;
+  transition: background-color 0.2s ease;
+}
+
 .search-wrapper input:focus {
   outline: none;
   box-shadow: 0 0 5px #4a90e2;

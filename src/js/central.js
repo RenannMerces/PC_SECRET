@@ -17,3 +17,4 @@ updateClock();
 setInterval(updateClock, 1000);
 
 // Futuro: adicionar funcionalidades de abrir pastas, menu iniciar etc.
+

@@ -1,52 +1,19 @@
-particlesJS('particles-js', {
-  particles: {
-    number: { value: 60 },
-    color: { value: "#ff66cc" },
-    shape: { type: "circle" },
-    opacity: {
-      value: 0.3,
-      random: true
-    },
-    size: {
-      value: 5,
-      random: true
-    },
-    line_linked: {
-      enable: true,
-      distance: 150,
-      color: "#ff99cc",
-      opacity: 0.4,
-      width: 1
-    },
-    move: {
-      enable: true,
-      speed: 1.5,
-      direction: "none",
-      out_mode: "out"
-    }
-  },
-  interactivity: {
-    detect_on: "canvas",
-    events: {
-      onhover: { enable: true, mode: "repulse" },
-      onclick: { enable: true, mode: "push" }
-    },
-    modes: {
-      repulse: { distance: 100 },
-      push: { particles_nb: 4 }
-    }
-  },
-  retina_detect: true
-});
+// Atualiza o relógio na barra de tarefas a cada segundo
+function updateClock() {
+  const clock = document.getElementById('clock');
+  if (!clock) return;
 
-//  --------------- script do modal da galerial ----------------------
+  const now = new Date();
+  // Formato HH:MM
+  let hours = now.getHours().toString().padStart(2, '0');
+  let minutes = now.getMinutes().toString().padStart(2, '0');
 
-  const galeriaModal = document.getElementById('galeriaModal');
-  galeriaModal.addEventListener('show.bs.modal', function (event) {
-    const img = event.relatedTarget;
-    const src = img.getAttribute('data-img');
-    const caption = img.getAttribute('data-caption') || '';
-    
-    document.getElementById('modalImage').src = src;
-    document.getElementById('modalCaption').textContent = caption;
-  });
+  clock.textContent = `${hours}:${minutes}`;
+}
+
+// Atualiza o relógio já ao carregar a página
+updateClock();
+// Atualiza o relógio a cada 1 segundo
+setInterval(updateClock, 1000);
+
+// Futuro: adicionar funcionalidades de abrir pastas, menu iniciar etc.

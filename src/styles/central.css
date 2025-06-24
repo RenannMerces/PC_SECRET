@@ -1,57 +1,76 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
-
-*{
-    font-family: "Montserrat", sans-serif;
-    margin: 0;
-    padding: 0;
-    border: 0;
+/* Estilo geral da página e fundo */
+body {
+  margin: 0;
+  padding: 0;
+  background: url('https://images.unsplash.com/photo-1587202372775-a7d84c0fbf36?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: #3b215b;
-    z-index: -1;
+/* Container das pastas na área de trabalho */
+#desktop {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  z-index: 10;
 }
 
-/* ------------------ Estilo da galeria ------------------*/
+/* Ícones das pastas */
+.desktop-icon {
+  width: 70px;
+  text-align: center;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+}
 
- .gallery-block {
-    width: 100%;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+.desktop-icon img {
+  width: 48px;
+  height: 48px;
+  filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.7));
+  transition: transform 0.2s;
+}
+
+.desktop-icon:focus,
+.desktop-icon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  transform: scale(1.05);
+  outline: none;
+}
+
+/* Barra de tarefas */
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(35, 35, 35, 0.95);
+  height: 60px;
+  padding: 0 15px;
+  z-index: 999;
+  font-size: 14px;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Input de pesquisa com fundo escuro */
+.search-wrapper input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #4a90e2;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  /* Esconder texto do explorador e input na barra para telas menores */
+  .taskbar .d-flex > button span,
+  .search-wrapper {
+    display: none !important;
   }
-
-  .gallery-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-  }
-
-  .gallery-img:hover {
-    transform: scale(1.05);
-  }
-
-  /* ------------------------ MODAL STYLE --------------------------- */
-
-.modal-body {
-  background-color: #E6E0E0;
-  border-radius: 10px;
-}
-
-.modal-footer{
-  background-color: #E6E0E0 !important;
-}
-
-#modalImage{
-  border: 3px solid black;
-}
-
-#modalCaption{
-  color: black;
 }

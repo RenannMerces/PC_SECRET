@@ -1,114 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Central - Presente</title>
-    <link rel="stylesheet" href="../src/styles/central.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="shortcut icon" href="../../src/assets/coracao.png" type="image/x-icon">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PC DO RENAN</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="../src/styles/central.css" />
+  </head>
+  
 <body>
-    <div id="particles-js"></div>
 
- <!-- Galeria com blocos fixos -->
-<div class="container py-5">
-  <!-- Primeira linha -->
-  <div class="row g-3">
-    <!-- Imagem grande esquerda -->
-    <div class="col-lg-8 col-md-12">
-      <div class="gallery-block" style="height: 500px;">
-        <img src="../../src/assets/galeria/foto-1.jpg"
-            class="gallery-img"
-            data-bs-toggle="modal"
-            data-bs-target="#galeriaModal"
-            data-img="../../src/assets/galeria/foto-1.jpg"
-            data-caption="Essa é uma imagem especial 💖"
-            alt="Imagem grande">
+  <!-- Desktop: Pastas no canto superior esquerdo -->
+  <section id="desktop" class="p-3">
+    <div class="desktop-icon" tabindex="0">
+      <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="Pasta Documentos" />
+      <div>Documentos</div>
+    </div>
+    <div class="desktop-icon" tabindex="0">
+      <img src="https://cdn-icons-png.flaticon.com/512/716/716773.png" alt="Pasta Imagens" />
+      <div>Imagens</div>
+    </div>
+    <div class="desktop-icon" tabindex="0">
+      <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="Pasta Downloads" />
+      <div>Downloads</div>
+    </div>
+  </section>
+
+  <!-- Barra de tarefas fixa embaixo -->
+  <nav class="taskbar d-flex align-items-center justify-content-between px-3">
+    <!-- Lado esquerdo -->
+    <div class="d-flex align-items-center gap-3">
+      <!-- Botão Windows -->
+      <button id="btn-windows" class="btn btn-dark p-2" aria-label="Menu iniciar">
+        <i class="bi bi-windows fs-4"></i>
+      </button>
+
+      <!-- Explorador de arquivos -->
+      <button class="btn btn-dark p-2 d-flex align-items-center gap-2" aria-label="Explorador de arquivos">
+        <i class="bi bi-folder-fill fs-5"></i>
+        <span class="d-none d-md-inline">Explorador</span>
+      </button>
+
+      <!-- Input de pesquisa -->
+      <div class="search-wrapper d-none d-md-flex align-items-center bg-dark rounded px-2">
+        <i class="bi bi-search text-light"></i>
+        <input type="search" class="form-control form-control-sm bg-dark border-0 text-light ms-2" placeholder="Pesquisar" aria-label="Pesquisar"/>
       </div>
     </div>
 
-    <!-- Duas imagens empilhadas -->
-    <div class="col-lg-4 col-md-12 d-flex flex-column gap-3">
-      <div class="gallery-block" style="height: 245px;">
-        <img src="../../src/assets/galeria/foto-2.jpg"
-             class="gallery-img"
-             data-bs-toggle="modal"
-             data-bs-target="#galeriaModal"
-             data-img="../../src/assets/galeria/foto-2.jpg"
-             data-caption="Essa é uma imagem especial 💖"
-             alt="Imagem 1">
-      </div>
-      <div class="gallery-block" style="height: 245px;">
-        <img src="../../src/assets/galeria/foto-3.jpg"
-             class="gallery-img"
-             data-bs-toggle="modal"
-             data-bs-target="#galeriaModal"
-             data-img="../../src/assets/galeria/foto-3.jpg"
-             data-caption="Essa é uma imagem especial 💖"
-             alt="Imagem 2">
-      </div>
+    <!-- Lado direito -->
+    <div class="d-flex align-items-center gap-3 text-light">
+      <i class="bi bi-wifi fs-5" title="Wi-Fi"></i>
+      <i class="bi bi-volume-up fs-5" title="Volume"></i>
+      <div id="clock" class="fs-6 fw-light"></div>
     </div>
-  </div>
-
-  <!-- Segunda linha: 3 imagens lado a lado -->
-  <div class="row g-3 mt-2">
-    <div class="col-lg-4 col-md-4 col-sm-12">
-      <div class="gallery-block" style="height: 200px;">
-        <img src="../../src/assets/galeria/foto-4.jpg"
-             class="gallery-img"
-             data-bs-toggle="modal"
-             data-bs-target="#galeriaModal"
-             data-img="../../src/assets/galeria/foto-4.jpg"
-             data-caption="Essa é uma imagem especial 💖"
-             alt="Imagem 3">
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-4 col-sm-12">
-      <div class="gallery-block" style="height: 200px;">
-        <img src="../../src/assets/galeria/foto-7.jpg"
-             class="gallery-img"
-             data-bs-toggle="modal"
-             data-bs-target="#galeriaModal"
-             data-img="../../src/assets/galeria/foto-7.jpg"
-             data-caption="Essa é uma imagem especial 💖"
-             alt="Imagem 4">
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-4 col-sm-12">
-      <div class="gallery-block" style="height: 200px;">
-        <img src="../../src/assets/galeria/foto-6.jpg"
-             class="gallery-img"
-             data-bs-toggle="modal"
-             data-bs-target="#galeriaModal"
-             data-img="../../src/assets/galeria/foto-6.jpg"
-            data-caption="Essa é uma imagem especial 💖"
-             alt="Imagem 5">
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal para ampliar imagens -->
-<div class="modal fade" id="galeriaModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-white rounded shadow-lg">
-      <div class="modal-body d-flex flex-column align-items-center justify-content-center p-4">
-        <img src="" id="modalImage" class="img-thumbnail mb-3" style="max-width: 90%; max-height: 60vh;" alt="Imagem ampliada">
-        <p id="modalCaption" class="text-center small fst-italic"></p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Script do modal -->
+  </nav>
 
 
-          <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-    <script src="../src/js/central.js"></script>
+  <!--------------------------- SCRIPT ----------------------->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

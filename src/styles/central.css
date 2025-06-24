@@ -1,15 +1,16 @@
-/* Estilo geral da página e fundo */
+
 body {
   margin: 0;
   padding: 0;
-  background: url('https://images.unsplash.com/photo-1587202372775-a7d84c0fbf36?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+  background: url('../assets/backgroud_pc.jpg') no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
   overflow: hidden;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Container das pastas na área de trabalho */
+/* ---------- Container das pastas na área de trabalho ----------*/
+
 #desktop {
   position: absolute;
   top: 10px;
@@ -46,7 +47,7 @@ body {
   outline: none;
 }
 
-/* Barra de tarefas */
+/* ---------- Barra de tarefas ---------- */
 .taskbar {
   position: fixed;
   bottom: 0;
@@ -59,6 +60,7 @@ body {
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.7);
 }
 
+/* ---------- Input de pesquisa ---------- */
 .search-wrapper {
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 20px;
@@ -83,3 +85,10 @@ body {
     display: none !important;
   }
 }
+/* Placehouder */
+input::placeholder {
+  color: white !important;
+  opacity: 0.5 !important; /* Garante que a cor apareça totalmente */
+}
+
+/* ----------------- ICONES DE WIFI E SOM ---------------- */

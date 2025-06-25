@@ -18,8 +18,9 @@
   <!-- Tela de login -->
   <div class="login-container text-center position-relative z-1 animate__fadein">
     <img src="src/assets/foto_lizzaerenan.jpg" alt="Perfil" class="profile-img mb-3 shadow" />
-    <h4 class="fw-bold">Renan</h4>
-    <p class="birthday-msg">🎉 Feliz aniversário! 🎉</p>
+    <h4 class="fw-bold">ULTRA <span id="secreto">SECRETO</span></h4>
+    <p class="birthday-msg"><span style="color: red;">D</span>esvende <span style="color: red;">o</span> Enigma, e veja a su<span style="color: red;">r</span>pres<span style="color: red;">a</span> <span style="color: aqua;">"Além da Vida Real"</span>🫶</p>
+
     <input id="senha" type="password" class="form-control mx-auto mt-3" placeholder="Digite sua senha" />
   </div>
 
@@ -29,7 +30,7 @@
       <!-- Ícone Perfil com menu -->
       <div class="position-relative">
         <div id="perfil-trigger" class="d-flex align-items-center gap-2 hover-icon" role="button">
-          <i class="bi bi-person-circle fs-4"></i>
+          <i class="bi bi-person-circle fs-4" title="Perfil"></i>
           <span>Renan</span>
         </div>
 
@@ -56,7 +57,7 @@
 
           <!-- Ícone Wi-Fi com menu -->
     <div class="position-relative">
-      <i id="wifi-icon" class="bi bi-wifi fs-5 hover-icon" role="button"></i>
+      <i id="wifi-icon" title="Wi-fi" class="bi bi-wifi fs-5 hover-icon" role="button"></i>
 
         <!-- Menu de Wi-Fi oculto por padrão -->
           <div id="wifi-menu" class="wifi-popup bg-dark text-white rounded shadow p-2 position-absolute">
@@ -64,7 +65,7 @@
             <div>
               <div class="wifi-option d-flex align-items-center gap-2" role="button" data-bs-toggle="modal" data-bs-target="#batsinalModal">
                 <img src="src/assets/icons/batman-icon.png" alt="Batman" class="wifi-icon-img" />
-                Batsinal
+                BAT-Sinal
               </div>
             </div>
             <div>
@@ -76,7 +77,7 @@
           </div>
       </div>
 
-      <i class="bi bi-power fs-5 hover-icon" role="button" onclick="desligar()"></i>
+      <i class="bi bi-power fs-5 hover-icon" title="Desligar" role="button" onclick="desligar()"></i>
     </div>
 
   </div>

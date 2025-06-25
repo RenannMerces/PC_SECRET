@@ -6,6 +6,8 @@
   <title>Login PC - Surpresa</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
   <link rel="stylesheet" href="../src/styles/login.css" />
 </head>
 <body class="d-flex justify-content-center align-items-center text-white">
@@ -24,17 +26,78 @@
   <!-- Rodapé com ícones -->
   <div class="position-absolute bottom-0 w-100 px-4 pb-3 d-flex justify-content-between align-items-center text-white footer-icons">
     <!-- Esquerda: Perfil -->
-    <div class="d-flex align-items-center gap-2 hover-icon">
-      <i class="bi bi-person-circle fs-4"></i>
-      <span>Renan</span>
-    </div>
+      <!-- Ícone Perfil com menu -->
+      <div class="position-relative">
+        <div id="perfil-trigger" class="d-flex align-items-center gap-2 hover-icon" role="button">
+          <i class="bi bi-person-circle fs-4"></i>
+          <span>Renan</span>
+        </div>
+
+        <!-- Menu de perfis -->
+        <div id="perfil-menu" class="perfil-popup bg-dark text-white rounded shadow p-2 position-absolute">
+          <div>
+            <a href="#" class="perfil-option d-flex align-items-center gap-2">
+              <img src="src/assets/icons/lizza.png" alt="Lizza" class="perfil-icon-img" />
+              Lizza
+            </a>
+          </div>
+          <div>
+            <a href="#" class="perfil-option d-flex align-items-center gap-2">
+              <img src="src/assets/icons/guest.png" alt="Convidado" class="perfil-icon-img" />
+              Convidado
+            </a>
+          </div>
+        </div>
+      </div>
+
 
     <!-- Direita: Wi-Fi e desligar -->
     <div class="d-flex align-items-center gap-3">
-      <i class="bi bi-wifi fs-5 hover-icon"></i>
+
+          <!-- Ícone Wi-Fi com menu -->
+    <div class="position-relative">
+      <i id="wifi-icon" class="bi bi-wifi fs-5 hover-icon" role="button"></i>
+
+        <!-- Menu de Wi-Fi oculto por padrão -->
+          <div id="wifi-menu" class="wifi-popup bg-dark text-white rounded shadow p-2 position-absolute">
+            <!-- Batsinal com modal -->
+            <div>
+              <div class="wifi-option d-flex align-items-center gap-2" role="button" data-bs-toggle="modal" data-bs-target="#batsinalModal">
+                <img src="src/assets/icons/batman-icon.png" alt="Batman" class="wifi-icon-img" />
+                Batsinal
+              </div>
+            </div>
+            <div>
+              <a href="https://youtu.be/wwux9KiBMjE?si=yHvj8_5dSB_LzJXa" target="_blank" class="wifi-option d-flex align-items-center gap-2">
+                <img src="src/assets/icons/barbie-icon.png" alt="Barbie" class="wifi-icon-img" />
+                Wi-Fi Barbie
+              </a>
+            </div>
+          </div>
+      </div>
+
       <i class="bi bi-power fs-5 hover-icon" role="button" onclick="desligar()"></i>
     </div>
+
   </div>
+
+
+
+
+
+<!-- Modal do Batsinal -->
+<div class="modal fade" id="batsinalModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content modal-no-bg border-0">
+      <div class="modal-body p-0 text-center">
+        <img src="src/assets/gifs/bruce-wayne-batman.gif" alt="Batsinal" class="img-fluid" />
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
   <script src="../src/js/login.js"></script>
 </body>

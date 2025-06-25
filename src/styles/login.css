@@ -63,9 +63,9 @@ input.form-control::placeholder {
 }
 
 input.form-control:focus {
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.25) !;
   outline: none;
-  box-shadow: 0 0 10px #0dcaf0;
+  box-shadow: 0 0 10px #000000;
 }
 
 .footer-icons i,
@@ -92,4 +92,83 @@ input.form-control:focus {
     width: 100px;
     height: 100px;
   }
+}
+
+/* --------------------- wifi ----------------- */
+
+.wifi-popup {
+  display: none;
+  bottom: 130%; /* sobe acima do ícone */
+  right: 0;
+  min-width: 160px;
+  z-index: 100;
+  border: 1px solid #666;
+  backdrop-filter: blur(5px);
+  background-color: rgba(33, 37, 41, 0.9); /* mesmo estilo do Bootstrap dark */
+}
+
+.wifi-option {
+  display: block;
+  padding: 8px 12px;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.2s;
+  border-radius: 6px;
+}
+
+.wifi-option:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.wifi-icon-img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+/* ---------------------- perfils -------------------------- */
+
+.perfil-popup {
+  display: none;
+  bottom: 130%;
+  left: 0;
+  min-width: 160px;
+  z-index: 100;
+  border: 1px solid #666;
+  backdrop-filter: blur(5px);
+  background-color: rgba(33, 37, 41, 0.9);
+}
+
+.perfil-option {
+  display: block;
+  padding: 8px 12px;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.2s;
+  border-radius: 6px;
+}
+
+.perfil-option:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.perfil-icon-img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+/* ------------------ modal batman ---------------- */
+
+/* Remove fundo, sombra e padding padrão do modal */
+.modal-no-bg {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Remove fundo escurecido do backdrop */
+.modal-backdrop.show {
+  opacity: 0 !important;
 }

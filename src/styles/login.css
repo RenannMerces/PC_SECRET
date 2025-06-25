@@ -1,5 +1,5 @@
 body {
-  background: url('../assets/david-corenswet-as-3840x2160-22764.jpg') no-repeat center center fixed;
+  background: url('../assets/walpaper/city.png') no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
   margin: 0;
@@ -8,7 +8,7 @@ body {
 }
 
 .background-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.548);
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -51,6 +51,17 @@ body {
   color: #ffffff;
 }
 
+/* -------------------- secreto ------------------ */
+ #secreto {
+      cursor: pointer;
+      color: red;
+      transition: color 0.3s;
+    }
+
+    #secreto:hover {
+      color: darkred;
+      text-decoration: underline;
+    }
 
 /* ------------------ input ------------------ */
 

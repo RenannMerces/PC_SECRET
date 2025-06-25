@@ -18,8 +18,13 @@
   <!-- Tela de login -->
   <div class="login-container text-center position-relative z-1 animate__fadein">
     <img src="src/assets/foto_lizzaerenan.jpg" alt="Perfil" class="profile-img mb-3 shadow" />
-    <h4 class="fw-bold">ULTRA <span id="secreto">SECRETO</span></h4>
-    <p class="birthday-msg"><span style="color: red;">D</span>esvende <span style="color: red;">o</span> Enigma, e veja a su<span style="color: red;">r</span>pres<span style="color: red;">a</span> <span style="color: aqua;">"Além da Vida Real"</span>🫶</p>
+
+  <h4 class="fw-bold">
+    ULTRA 
+    <span id="secreto" data-bs-toggle="modal" data-bs-target="#imagemModal">SECRETO</span>
+  </h4>
+
+    <p class="birthday-msg"><span style="color: gold;">D</span>esvende <span style="color: gold;">o</span> Enigma, e veja a su<span style="color: gold;">r</span>pres<span style="color: gold;">a</span> <span style="color: aqua;">"Além da Vida Real"</span>🫶</p>
 
     <input id="senha" type="password" class="form-control mx-auto mt-3" placeholder="Digite sua senha" />
   </div>
@@ -31,14 +36,14 @@
       <div class="position-relative">
         <div id="perfil-trigger" class="d-flex align-items-center gap-2 hover-icon" role="button">
           <i class="bi bi-person-circle fs-4" title="Perfil"></i>
-          <span>Renan</span>
+          <span>PC do Renan</span>
         </div>
 
         <!-- Menu de perfis -->
         <div id="perfil-menu" class="perfil-popup bg-dark text-white rounded shadow p-2 position-absolute">
           <div>
             <a href="#" class="perfil-option d-flex align-items-center gap-2">
-              <img src="src/assets/icons/lizza.png" alt="Lizza" class="perfil-icon-img" />
+              <img src="src/assets/gifs/cat-jump.gif" alt="Lizza" class="perfil-icon-img" />
               Lizza
             </a>
           </div>

@@ -1,0 +1,95 @@
+body {
+  background: url('../assets/david-corenswet-as-3840x2160-22764.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+.background-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.login-container {
+  z-index: 10;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+.birthday-msg {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #ffc107;
+}
+
+input.form-control {
+  max-width: 300px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  color: #fff;
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+input.form-control::placeholder {
+  color: #ccc;
+}
+
+input.form-control:focus {
+  background-color: rgba(255, 255, 255, 0.25);
+  outline: none;
+  box-shadow: 0 0 10px #0dcaf0;
+}
+
+.footer-icons i,
+.footer-icons span {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hover-icon:hover {
+  color: #0dcaf0;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .birthday-msg {
+    font-size: 1rem;
+  }
+
+  input.form-control {
+    width: 80% !important;
+  }
+
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+}

@@ -72,6 +72,11 @@ body {
   transition: background-color 0.2s ease;
 }
 
+.search-wrapper input{
+  background-color: #f5f5f5 !important;
+  color: black !important;
+}
+
 .search-wrapper input:focus {
   outline: none;
   box-shadow: 0 0 5px #4a90e2;
@@ -87,7 +92,7 @@ body {
 }
 /* Placehouder */
 input::placeholder {
-  color: white !important;
+  color: rgb(0, 0, 0) !important;
   opacity: 0.5 !important; /* Garante que a cor apareça totalmente */
 }
 

@@ -57,3 +57,14 @@ function desligar() {
       perfilMenu.style.display = "none";
     }
   });
+
+
+
+
+
+
+    const flipContainer = document.getElementById('flipCard');
+
+  flipContainer.addEventListener('click', () => {
+    flipContainer.classList.toggle('flipped');
+  });

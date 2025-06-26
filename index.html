@@ -15,14 +15,25 @@
   <!-- Fundo -->
   <div class="background-overlay w-100 h-100 position-absolute"></div>
 
-    <!-- Tela de login -->
-    <div class="login-container text-center position-relative z-1 animate__fadein">
-      <img src="src/assets/foto_lizzaerenan.jpg" alt="Perfil" class="profile-img mb-3 shadow" />
+      <!-- Tela de login -->
+      <div class="login-container text-center position-relative z-1 animate__fadein">
+        <div class="flip-container mx-auto mb-3" id="flipCard">
+          <div class="flipper">
+            <div class="front">
+              <img src="src/assets/foto_lizzaerenan.jpg" alt="Perfil Frente" class="profile-img shadow" />
+            </div>
+            <div class="back">
+              <img src="src/assets/foto_lizzae2.jpg" alt="Perfil Verso" class="profile-img shadow" />
+            </div>
+          </div>
+        </div>
+
         <!-- Gatilho -->
-        <h4 class="fw-bold ">ULTRA  <span id="secreto" data-bs-toggle="modal" data-bs-target="#imagemModal">SECRETO</span></h4>
+        <h4 class="fw-bold">ULTRA <span id="secreto" data-bs-toggle="modal" data-bs-target="#imagemModal">SECRETO</span></h4>
         <p class="birthday-msg"><span style="color: gold;">D</span>esvende <span style="color: gold;">o</span> Enigma, e veja a su<span style="color: gold;">r</span>pres<span style="color: gold;">a</span> <span style="color: aqua;">"Além da Vida Real"</span>🫶</p>
         <input id="senha" type="password" class="form-control mx-auto mt-3" placeholder="Digite sua senha" />
-    </div>
+      </div>
+
 
     <!-- Rodapé com ícones -->
     <div class="position-absolute bottom-0 w-100 px-4 pb-3 d-flex justify-content-between align-items-center text-white footer-icons">

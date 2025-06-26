@@ -155,6 +155,51 @@ input.form-control:hover {
     }
 }
 
+/* ------------------ btn-entrar -------------- */
+
+/* Estilo unificado para input + botão */
+.custom-input-group .form-control {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  backdrop-filter: blur(4px);
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.custom-input-group .form-control::placeholder {
+  color: #ccc;
+}
+
+.custom-input-group .form-control:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: none;
+  color: white;
+}
+
+.btn-enter {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: none;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.btn-enter:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #0dcaf0;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .custom-input-group {
+    width: 80% !important;
+  }
+}
+
 /* --------------------- wifi ----------------- */
 
 .wifi-popup {

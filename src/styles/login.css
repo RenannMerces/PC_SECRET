@@ -1,5 +1,5 @@
 body {
-  background: url('../assets/walpaper/city.png') no-repeat center center fixed;
+  background: url('../assets/walpaper/203518.jpg') no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
   margin: 0;
@@ -47,21 +47,24 @@ body {
 
 .birthday-msg {
   font-size: 1.1rem;
-  font-weight: 500;
+  font-weight: 300 !important;
   color: #ffffff;
 }
 
 /* -------------------- secreto ------------------ */
  #secreto {
       cursor: pointer;
-      color: red;
+      color: rgb(194, 224, 25);
       transition: color 0.3s;
     }
 
     #secreto:hover {
-      color: darkred;
-      text-decoration: underline;
+      color: rgb(75, 200, 177)
     }
+
+.login-container h4{
+  font-weight: 400 !important;
+}
 
 /* ------------------ input ------------------ */
 
@@ -94,7 +97,6 @@ input.form-control:focus {
 
 .hover-icon:hover {
   color: #0dcaf0;
-  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {

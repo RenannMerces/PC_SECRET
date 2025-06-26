@@ -1,5 +1,3 @@
-// login.js
-
 window.addEventListener('DOMContentLoaded', () => {
   const container = document.querySelector('.login-container');
   container.classList.add('show');
@@ -58,8 +56,6 @@ function desligar() {
     }
   });
 
-
-
 // ----------------------- flip card ------------------------
   const flipContainer = document.getElementById('flipCard');
 
@@ -71,4 +67,34 @@ function desligar() {
   document.addEventListener('DOMContentLoaded', function () {
     const dicaIcon = document.getElementById('dicaIcon');
     new bootstrap.Popover(dicaIcon);
+  });
+
+// ----------------------- senha input ------------------------
+
+  const senhaInput = document.getElementById("senha");
+  const btnEntrar = document.getElementById("btnEntrar");
+  const mensagemErro = document.getElementById("mensagemErro");
+
+  function verificarSenha() {
+    const senhaDigitada = senhaInput.value.trim().toLowerCase();
+    if (senhaDigitada === "dora") {
+      window.location.href = "../pages/central.html"; 
+    } else {
+      mensagemErro.style.display = "block";
+    }
+  }
+
+  // Clique no botão
+  btnEntrar.addEventListener("click", verificarSenha);
+
+  // Pressionar Enter no campo
+  senhaInput.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+      verificarSenha();
+    }
+  });
+
+  // Ocultar mensagem ao digitar
+  senhaInput.addEventListener("input", function () {
+    mensagemErro.style.display = "none";
   });

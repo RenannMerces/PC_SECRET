@@ -5,7 +5,7 @@
 }
 
 body {
-  background: url('../assets/walpaper/botanical-3840x2160-15587.jpg') no-repeat center center fixed;
+  background: url('../assets/walpaper/flores.jpg') no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
   margin: 0;
@@ -128,6 +128,7 @@ input.form-control:hover {
   border-color: rgba(255, 255, 255, 0.5) !important;
   color: white !important;
 }
+
 .footer-icons i,
 .footer-icons span {
   transition: all 0.3s ease;

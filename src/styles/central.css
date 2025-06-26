@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: url('../assets/backgroud_pc.jpg') no-repeat center center fixed;
+  background: url('../assets/walpaper/roxo.png') no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
   overflow: hidden;
@@ -82,9 +82,9 @@ body {
   box-shadow: 0 0 5px #4a90e2;
 }
 
-/* Responsividade */
+/* ---------------Responsividade -------------*/
+
 @media (max-width: 768px) {
-  /* Esconder texto do explorador e input na barra para telas menores */
   .taskbar .d-flex > button span,
   .search-wrapper {
     display: none !important;
@@ -93,7 +93,38 @@ body {
 /* Placehouder */
 input::placeholder {
   color: rgb(0, 0, 0) !important;
-  opacity: 0.5 !important; /* Garante que a cor apareça totalmente */
+  opacity: 0.5 !important;
 }
 
-/* ----------------- ICONES DE WIFI E SOM ---------------- */
+/* --------------------- wifi ----------------- */
+
+.wifi-popup {
+  display: none;
+  bottom: 130%; /* sobe acima do ícone */
+  right: 0;
+  min-width: 190px;
+  z-index: 100;
+  border: 1px solid #666;
+  backdrop-filter: blur(5px);
+  background-color: rgba(33, 37, 41, 0.9); /* mesmo estilo do Bootstrap dark */
+}
+
+.wifi-option {
+  display: block;
+  padding: 8px 12px;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.2s;
+  border-radius: 6px;
+}
+
+.wifi-option:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.wifi-icon-img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  border-radius: 4px;
+}

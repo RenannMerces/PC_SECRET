@@ -6,7 +6,9 @@
   <title>Login PC - Surpresa</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="shortcut icon" href="src/assets/icons/coracao.png" type="image/x-icon">
   <link rel="stylesheet" href="../src/styles/login.css" />
 </head>
 
@@ -29,15 +31,22 @@
         </div>
 
         <!-- Gatilho -->
-        <h4 class="fw-bold">ULTRA <span id="secreto" data-bs-toggle="modal" data-bs-target="#imagemModal">SECRETO</span></h4>
+        <h4 class="fw-bold">LOGIN <span id="secreto" data-bs-toggle="modal" data-bs-target="#imagemModal">SECRETO</span></h4>
         <p class="birthday-msg"><span style="color: gold;">D</span>esvende <span style="color: gold;">o</span> Enigma, e veja a su<span style="color: gold;">r</span>pres<span style="color: gold;">a</span> <span style="color: aqua;">"Além da Vida Real"</span>🫶</p>
+       
         <!-- Grupo do input + botão -->
         <div class="input-group mx-auto mt-3 custom-input-group" style="max-width: 300px;">
-          <input id="senha" type="password" class="form-control text-center text-white" placeholder="Digite sua senha" />
+          <input id="senha" type="password" class="form-control text-center                                                                                                                                                                                                             " placeholder="Digite sua senha" />
           <button class="btn btn-enter" id="btnEntrar" type="button">
             <i class="bi bi-box-arrow-in-right"></i>
           </button>
         </div>
+
+        <!-- Mensagem de erro -->
+        <div id="mensagemErro" class="text-danger text-center mt-2 " style="display: none;">
+          Tente novamente.
+        </div>
+        
      </div>
 
     <!-- Rodapé com ícones -->
@@ -58,9 +67,9 @@
               </a>
             </div>
             <div>
-              <a href="#" class="perfil-option d-flex align-items-center gap-2">
-                <img src="src/assets/icons/guest.png" alt="Convidado" class="perfil-icon-img" />
-                Convidado
+              <a href="https://youtu.be/LEdNCS8luWE?si=xtCZY2qRPCB2PhjB" target="_blank" class="perfil-option d-flex align-items-center gap-2">
+                <img src="src/assets/memes/v.jpeg" alt="Convidado" class="perfil-icon-img" />
+                V do BTS
               </a>
             </div>
           </div>
@@ -70,17 +79,9 @@
     <div class="d-flex align-items-center gap-3">
 
       <!-- Ícone de dica -->
-<!-- Ícone com popover -->
-<i class="bi bi-question-circle-fill fs-5 text-white" id="dicaIcon"
-   data-bs-toggle="popover"
-   data-bs-placement="top"
-   data-bs-trigger="focus"
-   data-bs-content="Repara nas letras na frase inicial"
-   tabindex="0"
-   role="button"></i>
+      <i class="bi bi-question-circle-fill fs-5 text-white" id="dicaIcon" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="focus" data-bs-content="Repara nas letras na frase inicial" tabindex="0" role="button"></i>
 
-
-            <!-- Ícone Wi-Fi com menu -->
+      <!-- Ícone Wi-Fi com menu -->
       <div class="position-relative">
         <i id="wifi-icon" title="Wi-fi" class="bi bi-wifi fs-5 hover-icon" role="button"></i>
 
@@ -130,9 +131,9 @@
   </div>
 </div>
 
-
-<!-------------------------------- SCRIPTS -------------------------------->
+<!-------------------------------------------- SCRIPTS ------------------------------------------>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
   <script src="../src/js/login.js"></script>
+
 </body>
 </html>

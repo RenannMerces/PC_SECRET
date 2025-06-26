@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+   font-family: "Montserrat", sans-serif;
+}
+
 body {
-  background: url('../assets/walpaper/203518.jpg') no-repeat center center fixed;
+  background: url('../assets/walpaper/botanical-3840x2160-15587.jpg') no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
   margin: 0;
@@ -8,7 +14,7 @@ body {
 }
 
 .background-overlay {
-  background-color: rgba(0, 0, 0, 0.548);
+  background-color: rgba(0, 0, 0, 0.63);
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -63,7 +69,7 @@ body {
     }
 
 .login-container h4{
-  font-weight: 400 !important;
+  font-weight: 800 !important;
 }
 
 /* ------------------ input ------------------ */
@@ -120,7 +126,7 @@ input.form-control:focus {
   display: none;
   bottom: 130%; /* sobe acima do ícone */
   right: 0;
-  min-width: 160px;
+  min-width: 190px;
   z-index: 100;
   border: 1px solid #666;
   backdrop-filter: blur(5px);

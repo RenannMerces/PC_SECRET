@@ -109,6 +109,10 @@ input::placeholder {
   background-color: rgba(33, 37, 41, 0.9); /* mesmo estilo do Bootstrap dark */
 }
 
+#wifi-icon:hover{
+  color: #0dcaf0 !important;
+}
+
 .wifi-option {
   display: block;
   padding: 8px 12px;

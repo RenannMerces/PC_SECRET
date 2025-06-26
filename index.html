@@ -61,30 +61,41 @@
           </div>
       </div>
 
-    <!-- Direita: Wi-Fi e desligar -->
+    <!-- Direita: Dica, Wi-Fi e desligar -->
     <div class="d-flex align-items-center gap-3">
 
-          <!-- Ícone Wi-Fi com menu -->
-    <div class="position-relative">
-      <i id="wifi-icon" title="Wi-fi" class="bi bi-wifi fs-5 hover-icon" role="button"></i>
+      <!-- Ícone de dica -->
+<!-- Ícone com popover -->
+<i class="bi bi-question-circle-fill fs-5 text-white" id="dicaIcon"
+   data-bs-toggle="popover"
+   data-bs-placement="top"
+   data-bs-trigger="focus"
+   data-bs-content="Repara nas letras na frase inicial"
+   tabindex="0"
+   role="button"></i>
 
-        <!-- Menu de Wi-Fi oculto por padrão -->
-          <div id="wifi-menu" class="wifi-popup bg-dark text-white rounded shadow p-2 position-absolute">
-            <!-- Batsinal com modal -->
-            <div>
-              <div class="wifi-option d-flex align-items-center gap-2" role="button" title="BatSinal" data-bs-toggle="modal" data-bs-target="#batsinalModal">
-                <img src="src/assets/icons/batman-icon.png" alt="Batman"  class="wifi-icon-img" />
-                Wi-Fi Batman
+
+            <!-- Ícone Wi-Fi com menu -->
+      <div class="position-relative">
+        <i id="wifi-icon" title="Wi-fi" class="bi bi-wifi fs-5 hover-icon" role="button"></i>
+
+          <!-- Menu de Wi-Fi oculto por padrão -->
+            <div id="wifi-menu" class="wifi-popup bg-dark text-white rounded shadow p-2 position-absolute">
+              <!-- Batsinal com modal -->
+              <div>
+                <div class="wifi-option d-flex align-items-center gap-2" role="button" title="BatSinal" data-bs-toggle="modal" data-bs-target="#batsinalModal">
+                  <img src="src/assets/icons/batman-icon.png" alt="Batman"  class="wifi-icon-img" />
+                  Wi-Fi Batman
+                </div>
+              </div>
+              <div>
+                <a href="https://youtu.be/wwux9KiBMjE?si=yHvj8_5dSB_LzJXa" title="Barbie-Sinal" target="_blank" class="wifi-option d-flex align-items-center gap-2">
+                  <img src="src/assets/icons/barbie-icon.png" alt="Barbie" class="wifi-icon-img" />
+                  Wi-Fi Barbie
+                </a>
               </div>
             </div>
-            <div>
-              <a href="https://youtu.be/wwux9KiBMjE?si=yHvj8_5dSB_LzJXa" title="Barbie-Sinal" target="_blank" class="wifi-option d-flex align-items-center gap-2">
-                <img src="src/assets/icons/barbie-icon.png" alt="Barbie" class="wifi-icon-img" />
-                Wi-Fi Barbie
-              </a>
-            </div>
-          </div>
-      </div>
+        </div>
       <i class="bi bi-power fs-5 hover-icon" title="Desligar" role="button" onclick="desligar()"></i>
     </div>
 

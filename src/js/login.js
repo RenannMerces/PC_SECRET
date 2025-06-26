@@ -60,11 +60,15 @@ function desligar() {
 
 
 
-
-
-
-    const flipContainer = document.getElementById('flipCard');
+// ----------------------- flip card ------------------------
+  const flipContainer = document.getElementById('flipCard');
 
   flipContainer.addEventListener('click', () => {
     flipContainer.classList.toggle('flipped');
+  });
+
+// ----------------------- dica popover ------------------------
+  document.addEventListener('DOMContentLoaded', function () {
+    const dicaIcon = document.getElementById('dicaIcon');
+    new bootstrap.Popover(dicaIcon);
   });

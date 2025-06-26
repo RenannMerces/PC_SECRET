@@ -89,6 +89,7 @@ body {
 }
 
 /* -------------------- secreto ------------------ */
+
  #secreto {
       cursor: pointer;
       color: rgb(194, 224, 25);
@@ -104,28 +105,29 @@ body {
 }
 
 /* ------------------ input ------------------ */
-
 input.form-control {
   max-width: 300px;
   background-color: rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 12px;
+  border-radius: 5px;
   color: #fff;
   text-align: center;
   transition: all 0.3s ease;
   backdrop-filter: blur(4px);
 }
-
 input.form-control::placeholder {
   color: #ccc;
 }
-
 input.form-control:focus {
-  background-color: rgba(255, 255, 255, 0.25) !;
+  background-color: rgba(255, 255, 255, 0.2); 
   outline: none;
-  box-shadow: 0 0 10px #000000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
-
+input.form-control:hover {
+  background-color: rgba(255, 255, 255, 0.25) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  color: white !important;
+}
 .footer-icons i,
 .footer-icons span {
   transition: all 0.3s ease;
@@ -140,16 +142,13 @@ input.form-control:focus {
   .birthday-msg {
     font-size: 1rem;
   }
-
   input.form-control {
     width: 80% !important;
   }
-
   .flip-container {
     width: 100px;
     height: 100px;
   }
-
     .profile-img {
       width: 100%;
       height: 100%;
@@ -223,14 +222,16 @@ input.form-control:focus {
 }
 
 /* ------------------ modal batman ---------------- */
-
-/* Remove fundo, sombra e padding padrão do modal */
 .modal-no-bg {
   background-color: transparent !important;
   box-shadow: none !important;
 }
-
-/* Remove fundo escurecido do backdrop */
 .modal-backdrop.show {
   opacity: 0 !important;
+}
+
+/* ---------------------- Dica ------------------ */
+
+#dicaIcon:hover {
+  color: #0dcaf0 !important;
 }

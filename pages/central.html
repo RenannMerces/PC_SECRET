@@ -43,7 +43,7 @@
       </button>
 
       <div id="windows-popover" class="popover-windows bg-dark text-light rounded p-2 shadow d-none position-absolute" style="top: -60px; left: 0; z-index: 9999;">
-        <button class="btn btn-sm btn-danger d-flex align-items-center gap-2" onclick="window.location.href='pagina-de-saida.html'">
+        <button class="btn btn-sm btn-danger d-flex align-items-center gap-2" onclick="window.location.href='../index.html'" aria-label="Sair do PC">
           <i class="bi bi-box-arrow-right"></i>
           <span>Sair</span>
         </button>
@@ -86,15 +86,24 @@
                 </div>
               </div>
           </div> 
-    
+
+          <!-- Ícone de Áudio -->
+          <div class="position-relative">
+            <i id="audio-icon" title="Áudio" class="bi bi-volume-up fs-5 hover-icon" role="button"></i>
+            <audio id="audio-player" src="../src/assets/mp3/happy happy happy [Q0G-SThjW0c].mp3"></audio>
+          </div>
+
+          <!-- GIF no centro da tela -->
+          <div id="audio-gif" style=" display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999; pointer-events: none;">
+            <img src="../src/assets/gifs/cat-jump.gif" alt="GIF de áudio" style="width: 100px; height: auto;" />
+          </div>
+
       </div>
-
-
 </nav>
 
 <!-- -------------------------- MODAIS ------------------------------ -->
 
-<!-- Modal do Batsinal -->
+<!-- Modal do deydey -->
 <div class="modal fade" id="deydey" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog deydey-dialog modal-dialog-centered modal-sm">
     <div class="modal-content deydey-content">

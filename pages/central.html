@@ -37,7 +37,7 @@
 
   <!-------------------------- Lado esquerdo ---------------------------->
     <!-- Botão Windows com Popover -->
-    <div class="d-flex align-items-center gap-3 position-relative">
+    <div class="d-flex align-items-center  position-relative gap-2">
       <button id="btn-windows" class="btn btn-dark" aria-label="Menu iniciar">
         <i class="bi bi-windows fs-4"></i>
       </button>
@@ -49,17 +49,17 @@
         </button>
       </div>
 
-      <!-- Explorador -->
-      <button class="btn btn-dark p-2 d-flex align-items-center gap-2" aria-label="Explorador de arquivos">
-        <i class="bi bi-folder-fill fs-5"></i>
-        <span class="d-none d-md-inline">Explorador</span>
+      <!-- Explorador (somente ícone) -->
+      <button class="btn btn-dark d-flex align-items-center justify-content-center" aria-label="Explorador de arquivos">
+        <i class="bi bi-folder-fill fs-4"></i>
       </button>
 
       <!-- Barra de pesquisa -->
-      <div class="search-wrapper d-none d-md-flex align-items-center bg-dark rounded px-2">
-        <i class="bi bi-search text-light"></i>
-        <input type="search" class="form-control form-control-sm bg-transparent text-light border-0 ms-2" placeholder="Num funciona :D" aria-label="Pesquisar"/>
+      <div class="search-wrapper d-none d-md-flex align-items-center ms-2">
+        <i class="bi bi-search search-icon"></i>
+        <input type="search" class="search-input" placeholder="Num funciona..." aria-label="Pesquisar"/>
       </div>
+
     </div>
 
     <!--------------------------------- Direita: Dica, Wi-Fi e desligar --------------------------------->

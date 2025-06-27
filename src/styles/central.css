@@ -60,27 +60,50 @@ body {
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.7);
 }
 
-/* ---------- Input de pesquisa ---------- */
+/* ---------- Estilo da barra de pesquisa ---------- */
+/* ---------- Wrapper ---------- */
 .search-wrapper {
-  background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
-  padding: 8px 20px;
+  background-color: #757575;
+  border: 1px solid #3c3c3c;
+  padding: 4px 8px;
+  border-radius: 5px; /* quase quadrado */
   display: flex;
   align-items: center;
   gap: 6px;
-  min-width: 180px;
-  transition: background-color 0.2s ease;
-}
-
-.search-wrapper input{
-  background-color: #f5f5f5 !important;
+  min-width: 150px;
+  transition: border-color 0.2s ease;
   color: black !important;
 }
 
-.search-wrapper input:focus {
-  outline: none;
-  box-shadow: 0 0 5px #4a90e2;
+.search-wrapper:hover {
+  border-color: #9f9e9e;
 }
+
+.search-wrapper:focus-within {
+  border-color: #4a90e2;
+}
+
+/* ---------- Ícone ---------- */
+.search-icon {
+  color: #fffbfb;
+  font-size: 1rem;
+}
+/* ---------- Input ---------- */
+.search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #000000;
+  font-size: 0.9rem;
+  width: 100%;
+  padding: 2px;
+}
+
+.search-input::placeholder {
+  color: #777;
+  font-style: normal;
+}
+
 
 /* ---------------Responsividade -------------*/
 

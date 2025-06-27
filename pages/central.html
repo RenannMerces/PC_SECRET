@@ -14,29 +14,59 @@
 <body>
 
   <!-------------------- Desktop: Pastas no canto superior esquerdo ------------------->
-
-  <section id="desktop" class="p-3">
-      <div class="desktop-icon" tabindex="0">
-        <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="Pasta Documentos" />
-        <div>Documentos</div>
-      </div>
-      <div class="desktop-icon" tabindex="0">
-        <img src="https://cdn-icons-png.flaticon.com/512/716/716773.png" alt="Pasta Imagens" />
-        <div>Imagens</div>
-      </div>
-      <div class="desktop-icon" tabindex="0">
-        <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="Pasta Downloads" />
-        <div>Segredo🔒</div>
-      </div>
+ <section id="desktop" class="p-3">
+    <div class="desktop-icon" tabindex="0">
+      <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="Pasta Documentos" />
+      <div>Documentos</div>
+    </div>
+    <div class="desktop-icon" id="open-images" tabindex="0">
+      <img src="https://cdn-icons-png.flaticon.com/512/716/716773.png" alt="Pasta Imagens" />
+      <div>Imagens</div>
+    </div>
+    <div class="desktop-icon" tabindex="0">
+      <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="Pasta Downloads" />
+      <div>Segredo🔒</div>
+    </div>
   </section>
 
+  <!-- Janela estilo Windows -->
+  <div class="window" id="imageWindow">
+    <div class="window-header">
+      <span>Imagens</span>
+      <div class="window-controls">
+        <button onclick="minimizeWindow()"><i class="bi bi-dash"></i></button>
+        <button onclick="toggleMaximize()"><i class="bi bi-square"></i></button>
+        <button onclick="closeWindow()"><i class="bi bi-x"></i></button>
+      </div>
+    </div>
+    <div class="window-body">
+      <div class="image-grid">
+        <div class="image-item">
+          <img src="https://placekitten.com/100/100" alt="Gato 1" />
+          <div>Gato 1</div>
+        </div>
+        <div class="image-item">
+          <img src="https://placekitten.com/101/100" alt="Gato 2" />
+          <div>Gato 2</div>
+        </div>
+        <div class="image-item">
+          <img src="https://placekitten.com/102/100" alt="Gato 3" />
+          <div>Gato 3</div>
+        </div>
+        <div class="image-item">
+          <img src="https://placekitten.com/103/100" alt="Gato 4" />
+          <div>Gato 4</div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-------------------------- Barra de tarefas fixa embaixo --------------------------->
 
 <!-- Taskbar -->
 <nav class="taskbar d-flex align-items-center justify-content-between px-3 bg-dark text-light position-fixed bottom-0 w-100" style="height: 50px; z-index: 99999;">
 
   <!-------------------------- Lado esquerdo ---------------------------->
-    <!-- Botão Windows com Popover -->
+    <!-- Windows -->
     <div class="d-flex align-items-center  position-relative gap-2">
       <button id="btn-windows" class="btn btn-dark" aria-label="Menu iniciar">
         <i class="bi bi-windows fs-4"></i>
@@ -49,7 +79,7 @@
         </button>
       </div>
 
-      <!-- Explorador (somente ícone) -->
+      <!-- Explorador -->
       <button class="btn btn-dark d-flex align-items-center justify-content-center" aria-label="Explorador de arquivos">
         <i class="bi bi-folder-fill fs-4"></i>
       </button>
@@ -59,19 +89,17 @@
         <i class="bi bi-search search-icon"></i>
         <input type="search" class="search-input" placeholder="Num funciona..." aria-label="Pesquisar"/>
       </div>
-
     </div>
 
-    <!--------------------------------- Direita: Dica, Wi-Fi e desligar --------------------------------->
+    <!--------------------------------- Direita: Wi-Fi e Som --------------------------------->
     <div class="d-flex align-items-center gap-3">
 
-        <!-- Ícone Wi-Fi com menu -->
+        <!--  Wi-Fi -->
         <div class="position-relative">
           <i id="wifi-icon" title="Wi-fi" class="bi bi-wifi fs-5 hover-icon" role="button"></i>
 
-            <!-- Menu de Wi-Fi oculto por padrão -->
+            <!-- Menu de Wi-Fi  -->
               <div id="wifi-menu" class="wifi-popup bg-dark text-white rounded shadow p-2 position-absolute">
-                <!-- Batsinal com modal -->
                 <div>
                   <div class="wifi-option d-flex align-items-center gap-2" role="button" title="??????" data-bs-toggle="modal" data-bs-target="#deydey">
                     <img src="../src/assets/icons/inte.webp" alt="Batman"  class="wifi-icon-img" />

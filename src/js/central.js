@@ -56,3 +56,25 @@
       }, 10000); // 10 segundos = 10000ms
     }
   });
+
+// ----------------------- pasta de img ------------------------
+
+const imageWindow = document.getElementById('imageWindow');
+const openImages = document.getElementById('open-images');
+
+openImages.addEventListener('click', () => {
+  imageWindow.style.display = 'flex';
+  imageWindow.classList.remove('minimized');
+});
+
+function closeWindow() {
+  imageWindow.style.display = 'none';
+}
+
+function minimizeWindow() {
+  imageWindow.style.display = 'none'; // pode futuramente enviar para uma "taskbar"
+}
+
+function toggleMaximize() {
+  imageWindow.classList.toggle('maximized');
+}

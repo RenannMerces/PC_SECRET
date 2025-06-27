@@ -101,3 +101,31 @@ function closePreview() {
 function minimizePreview() {
   previewWindow.style.display = 'none';
 }
+
+// ----------------------- bloco de notas - mensagem ------------------------
+
+// ----------------------- janela de mensagem ------------------------
+
+const messageWindow = document.getElementById('messageWindow');
+const messageIcon = Array.from(document.querySelectorAll('.desktop-icon')).find(icon => 
+  icon.innerText.trim().toLowerCase() === 'mensagem'
+);
+
+if (messageIcon) {
+  messageIcon.addEventListener('click', () => {
+    messageWindow.style.display = 'flex';
+    messageWindow.classList.remove('minimized');
+  });
+}
+
+function closeMessage() {
+  messageWindow.style.display = 'none';
+}
+
+function minimizeMessage() {
+  messageWindow.style.display = 'none';
+}
+
+function maximizeMessage() {
+  messageWindow.classList.toggle('maximized');
+}

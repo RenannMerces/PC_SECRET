@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
-    <link rel="shortcut icon" href="src/assets/icons/coracao.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../src/assets/icons/coracao.png" type="image/x-icon">
     <link rel="stylesheet" href="../src/styles/central.css" />
   </head>
 
@@ -17,7 +17,7 @@
  <section id="desktop" class="p-3">
     <div class="desktop-icon" tabindex="0">
       <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="Pasta Documentos" />
-      <div>Documentos</div>
+      <div>Mensagem</div>
     </div>
     <div class="desktop-icon" id="open-images" tabindex="0">
       <img src="https://cdn-icons-png.flaticon.com/512/716/716773.png" alt="Pasta Imagens" />
@@ -28,6 +28,24 @@
       <div>Segredo🔒</div>
     </div>
   </section>
+
+  <!-- Janela de Mensagem estilo Bloco de Notas -->
+      <!-- Janela de Mensagem estilo Bloco de Notas -->
+      <div class="window" id="messageWindow">
+        <div class="window-header">
+          <span>Mensagem</span>
+          <div class="window-controls">
+            <button onclick="minimizeMessage()"><i class="bi bi-dash"></i></button>
+            <button onclick="maximizeMessage()"><i class="bi bi-square"></i></button>
+            <button onclick="closeMessage()"><i class="bi bi-x"></i></button>
+          </div>
+        </div>
+        <div class="window-body p-0">
+          <textarea id="birthdayMessage" class="form-control notepad-textarea" readonly spellcheck="false">Feliz aniversárioooooooo moçaaaaaaaa 🥳🎉💞💖, que cê tenha muitos anos de vida, paz e muita saúde. Que Deus continue abençoando sua vida e toda sua trajetória, aproveite seu dia, pois hj é muito especial 🫶. Fiz essa surpresinha aqui bem simples mas de coração, pra demonstrar e relembrar o quão incrível e especial cê é pra mim e pra muitas outras pessoas ao seu redor, com esse jeitinho alegre que trás felicidade aonde vai, com essa dedicação inspiradora que sempre ajuda e motiva os outros, e com esse tamanhozinho aqui 🤏 que ainda diz ser maior q eu skksksks (sou mt maior, cê sabe 1,80), espero que sua nova fase agr dos 19 seja de muitas vitórias e conquistas, pq eu sei q cê é merecedora de tudo oq faz. E por fim, muito obrigado por tudo, pela nossa amizade, pelas nossas conversas, e por me aguentar todo esse tempo ksksksksk 💖. E ah, aguarda só mais um poquinho q jaja ce recebe seus presentes, ta? ksksksksksk</textarea>
+        </div>
+      </div>
+
+
 
   <!-- Janela estilo Windows -->
   <div class="window" id="imageWindow">
@@ -42,71 +60,71 @@
     <div class="window-body">
       <div class="image-grid">
         <div class="image-item">
-          <img src="../src/assets/galeria/foto-1.jpg" alt="Gato 1" />
+          <img src="../src/assets/galeria/foto-1.jpg" loading="lazy" alt="Gato 1" />
           <div>Primeira foto 🫶</div>
         </div>
         <div class="image-item">
-          <img src="../src/assets/galeria/foto-2.jpg" alt="Gato 2" />
+          <img src="../src/assets/galeria/foto-2.jpg" loading="lazy" alt="Gato 2" />
           <div>Q viagem kkkk</div>
         </div>
         <div class="image-item">
-          <img src="../src/assets/galeria/foto-3.jpg" alt="Gato 3" />
+          <img src="../src/assets/galeria/foto-3.jpg" loading="lazy" alt="Gato 3" />
           <div>Pessoas pra vida</div>
         </div>
         <div class="image-item">
-          <img src="../src/assets/galeria/foto-4.jpg" alt="Gato 4" />
+          <img src="../src/assets/galeria/foto-4.jpg" loading="lazy" alt="Gato 4" />
           <div>O tiozin atrás</div>
         </div>
         <div class="image-item">
-          <img src="../src/assets/galeria/foto-5.jpg" alt="Gato 4" />
+          <img src="../src/assets/galeria/foto-5.jpg" loading="lazy" alt="Gato 4" />
           <div>4k 😔</div>
         </div>
         <div class="image-item">
-          <img src="../src/assets/galeria/foto-6.jpg" alt="Gato 4" />
+          <img src="../src/assets/galeria/foto-6.jpg" loading="lazy" alt="Gato 4" />
           <div>Atores???</div>
         </div>
         <div class="image-item">
-          <img src="../src/assets/galeria/foto-7.jpg" alt="Gato 4" />
+          <img src="../src/assets/galeria/foto-7.jpg" loading="lazy" alt="Gato 4" />
           <div>Guerra do bolo</div>
         </div>
         <div class="image-item">
-          <img src="../src/assets/galeria/foto-8.jpg" alt="Gato 4" />
+          <img src="../src/assets/galeria/foto-8.jpg" loading="lazy" alt="Gato 4" />
           <div>KKKKKKKKKKKK</div>
         </div>
         <div class="image-item">
-          <img src="../src/assets/galeria/foto-9.jpg" alt="Gato 4" />
+          <img src="../src/assets/galeria/foto-9.jpg" loading="lazy" alt="Gato 4" />
           <div>amo vcs 🫶</div>
         </div>
         <div class="image-item">
-          <img src="../src/assets/galeria/foto-10.jpg" alt="Gato 4" />
+          <img src="../src/assets/galeria/foto-10.jpg" loading="lazy" alt="Gato 4" />
           <div>Olha pra cima</div>
         </div>
         <div class="image-item">
-          <img src="../src/assets/galeria/foto-11.jpg" alt="Gato 4" />
+          <img src="../src/assets/galeria/foto-11.jpg" loading="lazy" alt="Gato 4" />
           <div>Essa foto KKKK</div>
         </div>
         <div class="image-item">
-          <img src="../src/assets/galeria/foto-12.jpg" alt="Gato 4" />
+          <img src="../src/assets/galeria/foto-12.jpg" loading="lazy" alt="Gato 4" />
           <div>deyson la atras</div>
         </div>
         <div class="image-item">
-          <img src="../src/assets/galeria/foto-13.png" alt="Gato 4" />
+          <img src="../src/assets/galeria/foto-13.png" loading="lazy" alt="Gato 4" />
           <div>Ficou fofo</div>
         </div>
         <div class="image-item">
-          <img src="../src/assets/galeria/foto-14.jpg" alt="Gato 4" />
+          <img src="../src/assets/galeria/foto-14.jpg" loading="lazy" alt="Gato 4" />
           <div>👉👈</div>
         </div>
         <div class="image-item">
-          <img src="../src/assets/galeria/foto-15.jpg" alt="Gato 4" />
+          <img src="../src/assets/galeria/foto-15.jpg" loading="lazy" alt="Gato 4" />
           <div>Toda chique</div>
         </div>
                 <div class="image-item">
-          <img src="../src/assets/galeria/foto-16.jpg" alt="Gato 4" />
+          <img src="../src/assets/galeria/foto-16.jpg" loading="lazy" alt="Gato 4" />
           <div>💖💖💖</div>
         </div>
                 <div class="image-item">
-          <img src="../src/assets/galeria/foto-17.jpg" alt="Gato 4" />
+          <img src="../src/assets/galeria/foto-17.jpg" loading="lazy" alt="Gato 4" />
           <div>Eu maior</div>
         </div>
       </div>

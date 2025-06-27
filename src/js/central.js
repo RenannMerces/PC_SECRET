@@ -16,3 +16,19 @@
       }
     });
   });
+
+  // ----------------------- popover windowns ------------------------
+
+    const btnWindows = document.getElementById('btn-windows');
+  const popover = document.getElementById('windows-popover');
+
+  btnWindows.addEventListener('click', () => {
+    popover.classList.toggle('d-none');
+  });
+
+  // Fecha ao clicar fora
+  document.addEventListener('click', (e) => {
+    if (!btnWindows.contains(e.target) && !popover.contains(e.target)) {
+      popover.classList.add('d-none');
+    }
+  });

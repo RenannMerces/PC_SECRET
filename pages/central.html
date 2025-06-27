@@ -35,55 +35,75 @@
 <!-- Taskbar -->
 <nav class="taskbar d-flex align-items-center justify-content-between px-3 bg-dark text-light position-fixed bottom-0 w-100" style="height: 50px; z-index: 99999;">
 
-  <!-- Lado esquerdo -->
-  <div class="d-flex align-items-center gap-3">
-    <button id="btn-windows" class="btn btn-dark" aria-label="Menu iniciar">
-      <i class="bi bi-windows fs-4"></i>
-    </button>
+  <!-------------------------- Lado esquerdo ---------------------------->
+    <!-- Botão Windows com Popover -->
+    <div class="d-flex align-items-center gap-3 position-relative">
+      <button id="btn-windows" class="btn btn-dark" aria-label="Menu iniciar">
+        <i class="bi bi-windows fs-4"></i>
+      </button>
 
-    <button class="btn btn-dark p-2 d-flex align-items-center gap-2" aria-label="Explorador de arquivos">
-      <i class="bi bi-folder-fill fs-5"></i>
-      <span class="d-none d-md-inline">Explorador</span>
-    </button>
+      <div id="windows-popover" class="popover-windows bg-dark text-light rounded p-2 shadow d-none position-absolute" style="top: -60px; left: 0; z-index: 9999;">
+        <button class="btn btn-sm btn-danger d-flex align-items-center gap-2" onclick="window.location.href='pagina-de-saida.html'">
+          <i class="bi bi-box-arrow-right"></i>
+          <span>Sair</span>
+        </button>
+      </div>
 
-    <div class="search-wrapper d-none d-md-flex align-items-center bg-dark rounded px-2">
-      <i class="bi bi-search text-light"></i>
-      <input type="search" class="form-control form-control-sm bg-transparent text-light border-0 ms-2" placeholder="Num funciona :D" aria-label="Pesquisar"/>
+      <!-- Explorador -->
+      <button class="btn btn-dark p-2 d-flex align-items-center gap-2" aria-label="Explorador de arquivos">
+        <i class="bi bi-folder-fill fs-5"></i>
+        <span class="d-none d-md-inline">Explorador</span>
+      </button>
+
+      <!-- Barra de pesquisa -->
+      <div class="search-wrapper d-none d-md-flex align-items-center bg-dark rounded px-2">
+        <i class="bi bi-search text-light"></i>
+        <input type="search" class="form-control form-control-sm bg-transparent text-light border-0 ms-2" placeholder="Num funciona :D" aria-label="Pesquisar"/>
+      </div>
     </div>
-  </div>
 
-
-    <!-- Direita: Dica, Wi-Fi e desligar -->
+    <!--------------------------------- Direita: Dica, Wi-Fi e desligar --------------------------------->
     <div class="d-flex align-items-center gap-3">
 
-      <!-- Ícone Wi-Fi com menu -->
-      <div class="position-relative">
-        <i id="wifi-icon" title="Wi-fi" class="bi bi-wifi fs-5 hover-icon" role="button"></i>
+        <!-- Ícone Wi-Fi com menu -->
+        <div class="position-relative">
+          <i id="wifi-icon" title="Wi-fi" class="bi bi-wifi fs-5 hover-icon" role="button"></i>
 
-          <!-- Menu de Wi-Fi oculto por padrão -->
-            <div id="wifi-menu" class="wifi-popup bg-dark text-white rounded shadow p-2 position-absolute">
-              <!-- Batsinal com modal -->
-              <div>
-                <div class="wifi-option d-flex align-items-center gap-2" role="button" title="BatSinal" data-bs-toggle="modal" data-bs-target="#batsinalModal">
-                  <img src="src/assets/icons/batman-icon.png" alt="Batman"  class="wifi-icon-img" />
-                  Wi-Fi Batman
+            <!-- Menu de Wi-Fi oculto por padrão -->
+              <div id="wifi-menu" class="wifi-popup bg-dark text-white rounded shadow p-2 position-absolute">
+                <!-- Batsinal com modal -->
+                <div>
+                  <div class="wifi-option d-flex align-items-center gap-2" role="button" title="??????" data-bs-toggle="modal" data-bs-target="#deydey">
+                    <img src="../src/assets/icons/inte.webp" alt="Batman"  class="wifi-icon-img" />
+                    ??????????
+                  </div>
+                </div>
+                <div>
+                  <a href="https://youtube.com/shorts/Rx30njyQjvQ?si=aXrHrxRBezNNvf_k" title="Barbie-Sinal" target="_blank" class="wifi-option d-flex align-items-center gap-2">
+                    <img src="../src/assets/icons/barbie-icon.png" alt="Barbie" class="wifi-icon-img" />
+                    Wi-Fi Barbie
+                  </a>
                 </div>
               </div>
-              <div>
-                <a href="https://youtu.be/wwux9KiBMjE?si=yHvj8_5dSB_LzJXa" title="Barbie-Sinal" target="_blank" class="wifi-option d-flex align-items-center gap-2">
-                  <img src="src/assets/icons/barbie-icon.png" alt="Barbie" class="wifi-icon-img" />
-                  Wi-Fi Barbie
-                </a>
-              </div>
-            </div>
-        </div>
-
+          </div> 
+    
       </div>
 
 
 </nav>
 
+<!-- -------------------------- MODAIS ------------------------------ -->
 
+<!-- Modal do Batsinal -->
+<div class="modal fade" id="deydey" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog deydey-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content deydey-content">
+      <div class="modal-body deydey-body text-center">
+        <img src="../src/assets/memes/Captura de tela 2025-06-27 133946.png" alt="Batsinal" class="deydey-img" />
+      </div>
+    </div>
+  </div>
+</div>
 
   <!--------------------------- SCRIPT ----------------------->
   <!-- Bootstrap JS (inclui Popper.js) -->

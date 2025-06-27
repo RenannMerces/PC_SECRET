@@ -78,3 +78,26 @@ function minimizeWindow() {
 function toggleMaximize() {
   imageWindow.classList.toggle('maximized');
 }
+
+// ----------------------- preview de imagem ------------------------
+
+const previewWindow = document.getElementById('previewWindow');
+const previewImage = document.getElementById('previewImage');
+
+// Abrir janela ao clicar na imagem
+document.querySelectorAll('.image-item img').forEach(img => {
+  img.addEventListener('click', () => {
+    previewImage.src = img.src;
+    previewWindow.style.display = 'flex';
+    previewWindow.classList.remove('minimized');
+    previewWindow.classList.remove('maximized');
+  });
+});
+
+function closePreview() {
+  previewWindow.style.display = 'none';
+}
+
+function minimizePreview() {
+  previewWindow.style.display = 'none';
+}

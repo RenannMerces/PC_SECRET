@@ -21,16 +21,31 @@
     </div>
     <div class="desktop-icon" id="open-images" tabindex="0">
       <img src="https://cdn-icons-png.flaticon.com/512/716/716773.png" alt="Pasta Imagens" />
-      <div>Imagens</div>
+      <div>Recordações</div>
     </div>
-    <div class="desktop-icon" tabindex="0">
+    <div class="desktop-icon" id="open-secret" tabindex="0">
       <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="Pasta Downloads" />
       <div>Segredo🔒</div>
     </div>
   </section>
 
+    <!-- Janela do Segredo -->
+    <div class="secret-window" id="secret-window">
+      <div class="secret-header">
+        <span>Segredo</span>
+        <div class="secret-controls">
+          <button onclick="minimizeSecret()"><i class="bi bi-dash"></i></button>
+          <button onclick="closeSecret()"><i class="bi bi-x"></i></button>
+        </div>
+      </div>
+      <div class="secret-body d-flex justify-content-center align-items-center p-0">
+        <img id="secret-image" src="../src/assets/lizza_aniversario.png" loading="lazy" alt="Imagem Secreta" class="img-fluid" />
+      </div>
+    </div>
+
+
+
   <!-- Janela de Mensagem estilo Bloco de Notas -->
-      <!-- Janela de Mensagem estilo Bloco de Notas -->
       <div class="window" id="messageWindow">
         <div class="window-header">
           <span>Mensagem</span>
@@ -44,8 +59,6 @@
           <textarea id="birthdayMessage" class="form-control notepad-textarea" readonly spellcheck="false">Feliz aniversárioooooooo moçaaaaaaaa 🥳🎉💞💖, que cê tenha muitos anos de vida, paz e muita saúde. Que Deus continue abençoando sua vida e toda sua trajetória, aproveite seu dia, pois hj é muito especial 🫶. Fiz essa surpresinha aqui bem simples mas de coração, pra demonstrar e relembrar o quão incrível e especial cê é pra mim e pra muitas outras pessoas ao seu redor, com esse jeitinho alegre que trás felicidade aonde vai, com essa dedicação inspiradora que sempre ajuda e motiva os outros, e com esse tamanhozinho aqui 🤏 que ainda diz ser maior q eu skksksks (sou mt maior, cê sabe 1,80), espero que sua nova fase agr dos 19 seja de muitas vitórias e conquistas, pq eu sei q cê é merecedora de tudo oq faz. E por fim, muito obrigado por tudo, pela nossa amizade, pelas nossas conversas, e por me aguentar todo esse tempo ksksksksk 💖. E ah, aguarda só mais um poquinho q jaja ce recebe seus presentes, ta? ksksksksksk</textarea>
         </div>
       </div>
-
-
 
   <!-- Janela estilo Windows -->
   <div class="window" id="imageWindow">
@@ -144,6 +157,7 @@
     <img id="previewImage" src="" alt="Preview" class="img-fluid" style="max-height: 100%; max-width: 100%;" />
   </div>
 </div>
+
 
   <!-------------------------- Barra de tarefas fixa embaixo --------------------------->
 

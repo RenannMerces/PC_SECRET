@@ -129,3 +129,29 @@ function minimizeMessage() {
 function maximizeMessage() {
   messageWindow.classList.toggle('maximized');
 }
+
+
+//----------------------- Janela do Segredo ------------------------
+
+const secretWindow = document.getElementById('secret-window');
+const secretImage = document.getElementById('secret-image');
+const secretIcon = document.getElementById('open-secret');
+
+if (secretIcon) {
+  secretIcon.addEventListener('click', () => {
+    secretWindow.style.display = 'flex';
+    secretWindow.classList.remove('secret-maximized');
+  });
+}
+
+function closeSecret() {
+  secretWindow.style.display = 'none';
+}
+
+function minimizeSecret() {
+  secretWindow.style.display = 'none';
+}
+
+function maximizeSecret() {
+  secretWindow.classList.toggle('secret-maximized');
+}

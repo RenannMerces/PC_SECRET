@@ -77,7 +77,7 @@ function desligar() {
 
   function verificarSenha() {
     const senhaDigitada = senhaInput.value.trim().toLowerCase();
-    if (senhaDigitada === "dora") {
+    if (senhaDigitada === "secreto") {
       window.location.href = "../pages/central.html"; 
     } else {
       mensagemErro.style.display = "block";
